@@ -17,6 +17,7 @@ public class ListExercise {
      * Instantiate and return a List of Integers.
      *
      * List<Integer> list = new List<>(); is not valid code.
+     * List<Integer> list = new List<Integer>(); is valid code.
      * Two interesting things here: First, List is actually an interface, not a class: its only ability is to define
      * potential behavior, but it does not provide implementation code.
      *
@@ -29,8 +30,10 @@ public class ListExercise {
      *
      * @return a List<Integer> object.
      */
-    public List<Integer> createList(){
-        return null;
+
+    public List<Integer> createList() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        return list;
     }
 
     /**
@@ -39,8 +42,9 @@ public class ListExercise {
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
-    public int getSize(List<Integer> list){
-        return 0;
+
+    public int getSize(List<Integer> list) {
+        return list.size();
     }
 
     /**
@@ -51,7 +55,9 @@ public class ListExercise {
      * @param value an integer that we would like to add to list.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void addToList(List<Integer> list, int value){
+
+    public void addToList(List<Integer> list, int value) {
+        list.add(value);
     }
 
     /**
@@ -66,8 +72,9 @@ public class ListExercise {
      * @param index represents the index of the element we would like to retrieve.
      * @return the int at the location in 'list' represented by 'index'.
      */
-    public int get(List<Integer> list, int index){
-        return 0;
+
+    public int get(List<Integer> list, int index) {
+        return list.get(index);
     }
 
     /**
@@ -79,8 +86,9 @@ public class ListExercise {
      * @param position represents the index of the element we would like to remove.
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
-    public void removeFromList(List<Integer> list, int position){
 
+    public void removeFromList(List<Integer> list, int position){
+        list.remove(position);
     }
 
     /**
@@ -92,6 +100,8 @@ public class ListExercise {
      * @param value the new value which we would like to assign to the item at position in list
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
+    
     public void updateAtPosition(List<Integer> list, int position, int value){
+        list.set(position, value);
     }
 }
