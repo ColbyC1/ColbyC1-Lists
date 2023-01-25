@@ -17,7 +17,9 @@ public class ListExercise {
      * Instantiate and return a List of Integers.
      *
      * List<Integer> list = new List<>(); is not valid code.
-     * List<Integer> list = new List<Integer>(); is valid code.
+     * List<Integer> list = new ArrayList<Integer>(); is valid code.
+     * ArrayList<Integer> list = new ArrayList<Integer>(); is valid code.
+     * 
      * Two interesting things here: First, List is actually an interface, not a class: its only ability is to define
      * potential behavior, but it does not provide implementation code.
      *
